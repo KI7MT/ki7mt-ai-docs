@@ -1,0 +1,16 @@
+# KI7MT Sovereign AI Fleet Documentation
+# Python dependencies for building the documentation site
+
+# Core documentation framework
+mkdocs>=1.5.0
+
+# Material theme for MkDocs
+mkdocs-material>=9.5.0
+
+# Multi-repository plugin for aggregating docs
+mkdocs-multirepo-plugin>=0.7.0
+
+# Optional: Additional useful plugins
+# mkdocs-minify-plugin>=0.7.0  # Minify HTML, CSS, JS
+# mkdocs-git-revision-date-localized-plugin>=1.2.0  # Git revision dates
+# mkdocs-awesome-pages-plugin>=2.9.0  # Flexible page organization

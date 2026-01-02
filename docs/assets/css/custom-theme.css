@@ -1,0 +1,34 @@
+/*
+ * Custom Theme Overrides
+ *
+ * Additional theme customizations beyond the sovereign fleet branding.
+ * Use this file for layout adjustments, responsive design tweaks,
+ * and Material theme overrides.
+ */
+
+/* Responsive adjustments for high-DPI displays */
+@media (min-resolution: 2dppx) {
+  /* Optimize for high-DPI displays (Retina, 4K, etc.) */
+}
+
+/* Print styles for documentation */
+@media print {
+  /* Optimize documentation for printing */
+}
+
+/* Accessibility enhancements */
+.md-typeset a:focus,
+.md-typeset button:focus {
+  /* Enhanced focus indicators for keyboard navigation */
+  outline: 2px solid var(--sf-accent);
+  outline-offset: 2px;
+}
+
+/* Code syntax highlighting customization */
+.highlight .hll {
+  /* Custom highlight colors */
+}
+
+/*
+ * Add your additional theme customizations below
+ */

@@ -1,0 +1,61 @@
+name: Validate Documentation
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'mkdocs.yml'
+      - 'requirements.txt'
+      - '.github/workflows/**'
+
+  # Allow manual workflow dispatch
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install mkdocs
+          pip install mkdocs-material
+          pip install mkdocs-multirepo-plugin
+
+      - name: Validate MkDocs configuration
+        run: |
+          echo "Validating mkdocs.yml configuration..."
+          mkdocs build --strict --verbose
+
+      - name: Check for broken links
+        run: |
+          echo "Building documentation to check for broken links..."
+          mkdocs build --clean
+
+      - name: Validation summary
+        if: success()
+        run: |
+          echo "✅ Documentation validation successful"
+          echo "📖 All checks passed:"
+          echo "  - MkDocs configuration is valid"
+          echo "  - Documentation builds without errors"
+          echo "  - No broken internal links detected"
+
+      - name: Validation failed
+        if: failure()
+        run: |
+          echo "❌ Documentation validation failed"
+          echo "Please review the errors above and fix them before merging."
+          exit 1

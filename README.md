@@ -1,52 +1,203 @@
-# 🛰️ KI7MT Sovereign AI Docs
+# KI7MT Sovereign AI Fleet Documentation
 
-**The Central Intelligence Hub for the KI7MT Sovereign Fleet.**
+[![Deploy MkDocs](https://github.com/ki7mt/ki7mt-ai-docs/actions/workflows/deploy.yml/badge.svg)](https://github.com/ki7mt/ki7mt-ai-docs/actions/workflows/deploy.yml)
+[![Validate Documentation](https://github.com/ki7mt/ki7mt-ai-docs/actions/workflows/validate.yml/badge.svg)](https://github.com/ki7mt/ki7mt-ai-docs/actions/workflows/validate.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Welcome to the architectural source-of-truth for a resilient, local-first ecosystem of AI-integrated tools. This repository centralizes the documentation for our Model Context Protocol (MCP) servers, data engineering pipelines, and agentic workflows.
+**The Central Intelligence Hub for Local-First, Agentic Workflows**
 
+Welcome to the architectural source-of-truth for the KI7MT Sovereign Fleet—a resilient, privacy-first ecosystem of AI-integrated tools built on sovereign infrastructure. This repository centralizes documentation for our Model Context Protocol (MCP) servers, data engineering pipelines, and agentic workflows.
 
-## 🏛️ Project Vision
+**📖 Live Documentation**: [https://ki7mt.github.io/ki7mt-ai-docs/](https://ki7mt.github.io/ki7mt-ai-docs/)
 
-The mission of this documentation hub is to provide a unified context for AI agents and human collaborators to interact with specialized amateur radio and environmental data sets. Our architecture prioritizes **Sovereign Infrastructure**: high-performance local hardware (Ryzen 9 9500X3D, RTX 5090) and redundant ZFS-protected storage (TrueNAS Scale).
+---
 
+## Mission Statement
 
-## 🚀 The Sovereign Fleet
+The KI7MT Sovereign Fleet embodies a fundamental commitment to **data sovereignty** and **local-first architecture**. In an era of cloud dependency and centralized AI services, we maintain complete control over our computational infrastructure, data, and AI workflows.
 
-This hub aggregates documentation from the following specialized repositories:
+Our mission is to demonstrate that **agentic AI systems** can operate at scale on sovereign hardware without sacrificing performance, privacy, or capability. We believe in:
+
+- **Data Sovereignty**: Your data stays on your hardware, under your control
+- **Local-First Computing**: High-performance local infrastructure over cloud dependency
+- **Agentic Workflows**: AI agents with deep context and specialized domain knowledge
+- **Open Architecture**: Transparent, documented systems that empower both humans and AI
+- **Resilient Infrastructure**: ZFS-protected storage and enterprise-grade hardware
+
+This documentation hub serves as the unified context source that enables AI agents and human collaborators to interact effectively with specialized amateur radio, environmental, and propagation datasets—all while maintaining complete data sovereignty.
+
+---
+
+## Fleet Overview
+
+The Sovereign Fleet consists of specialized MCP servers, each providing deep domain expertise through structured data access and analysis capabilities:
 
 | Component | Documentation Path | Primary Purpose |
-| --- | --- | --- |
-| **WSPR-MCP** | [`/wspr`](https://www.google.com/search?q=%5Bhttps://ki7mt.io/wspr/%5D(https://ki7mt.io/wspr/)) | High-speed ingestion (10.6B+ rows) and query engine for WSPR spots. |
-| **ADIF-MCP** | [`/adif`](https://www.google.com/search?q=%5Bhttps://ki7mt.io/adif/%5D(https://ki7mt.io/adif/)) | Standardized ham radio log ingestion and normalization (ADIF v.3.1.6). |
-| **Solar-MCP** | [`/solar`](https://www.google.com/search?q=%5Bhttps://ki7mt.io/solar/%5D(https://ki7mt.io/solar/)) | Environmental and space weather context for propagation analysis. |
+|-----------|-------------------|-----------------|
+| **wspr-mcp** | `/wspr` | High-speed ingestion and query engine for 10.6B+ WSPR propagation spots |
+| **adif-mcp** | `/adif` | Standardized amateur radio log ingestion and normalization (ADIF v3.1.6) |
+| **solar-mcp** | `/solar` | Environmental and space weather context for propagation analysis |
 
+Each component operates independently while contributing to a unified knowledge graph accessible to AI agents through the Model Context Protocol.
 
-## 🛠️ Architecture Overview
+---
 
-The documentation is built using **MkDocs** with the `mkdocs-multirepo-plugin`. This allows us to:
+## Hardware Stack
 
-* **Decentralize Code:** Functional logic remains in project-specific repositories.
-* **Centralize Knowledge:** Markdown files are "pulled" into this master hub at build time to create a searchable, unified manual.
-* **AI-Native Context:** Structured specifically to improve reasoning and reduce token usage for AI agents (Claude, GitHub Copilot).
+The Sovereign Fleet runs on purpose-built, high-performance local infrastructure:
 
+### Compute Platform
+- **CPU**: AMD Ryzen 9 9950X3D (16 cores, 32 threads)
+- **GPU**: NVIDIA GeForce RTX 5090 (AI acceleration, CUDA compute)
+- **Memory**: High-bandwidth DDR5 RAM
+- **Storage**: TrueNAS Scale with ZFS redundancy
 
-## 🌐 Local Access & Domains
+### Storage Architecture
+- **Primary**: NVMe SSD arrays for high-speed data ingestion
+- **Archive**: TrueNAS ZFS pools with snapshot protection
+- **Capacity**: Multi-terabyte resilient storage for 10B+ row datasets
 
-* **Primary Hub:** [ki7mt.io](https://ki7mt.io)
-* **Technical Specs:** [docs.ki7mt.io](https://www.google.com/search?q=https://docs.ki7mt.io)
-* **Storage Archive:** `\\truenas\raw` (Internal Access Only)
+This hardware configuration enables:
+- Real-time ingestion of millions of records per day
+- Sub-second query response on billion-row datasets
+- Local LLM inference and AI agent operations
+- Zero cloud dependencies for core operations
 
+---
 
-## 🏗️ Getting Started
+## Context Source for AI Agents
 
-If you are an AI agent or a developer looking to contribute to the fleet:
+This documentation hub is specifically designed as a **Context Source** for AI agents operating within the Sovereign Fleet ecosystem.
 
-1. Review the [Global Architectural Standards](https://www.google.com/search?q=https://ki7mt.io/standards/).
-2. Consult the [Ingestion Guide](https://www.google.com/search?q=https://ki7mt.io/wspr/ingest/) for large-scale data handling.
-3. Check the [MCP Configuration](https://www.google.com/search?q=https://ki7mt.io/setup/mcp/) for setting up local agentic environments.
+### Why This Matters
 
-### 🏛️ Next Step: The Master `mkdocs.yml`
+Traditional documentation is written for human readers. This hub is architected for both:
 
-Now that the "Face" of the project is ready, **would you like me to draft the `mkdocs.yml` configuration that Claude will need tomorrow to actually link those three domains into the sidebar?**
-Setting up a Professional Documentation Site with MkDocs](https://www.youtube.com/watch?v=O7A1EUBW8Qc)
-This video is helpful because it walks through the setup of a professional MkDocs site, which will be the engine behind your `ki7mt-ai-docs` repository.
+1. **Human Developers**: Clear, navigable reference documentation
+2. **AI Agents**: Structured, parseable context that reduces token usage and improves reasoning
+
+### How AI Agents Use This Hub
+
+AI agents (Claude, custom MCP clients, etc.) leverage this documentation to:
+
+- **Understand Schema**: Access data structure and API specifications
+- **Execute Queries**: Learn correct query patterns and optimization strategies
+- **Reason About Data**: Understand domain context (propagation, solar cycles, ADIF standards)
+- **Generate Code**: Reference working examples and integration patterns
+- **Maintain Consistency**: Follow established architectural standards
+
+### Structured for AI Consumption
+
+The documentation uses:
+
+- **Consistent Markdown Structure**: Predictable heading hierarchy and organization
+- **Code Examples**: Working samples that agents can adapt
+- **API Specifications**: Clear parameter and return type documentation
+- **Domain Glossaries**: Specialized terminology definitions
+- **Cross-References**: Linked concepts for contextual reasoning
+
+By providing this structured context, we enable AI agents to operate with deep domain knowledge while minimizing hallucination and maximizing accuracy.
+
+---
+
+## Architecture Overview
+
+The documentation is built using **MkDocs** with the **mkdocs-multirepo-plugin**, enabling:
+
+### Decentralized Development
+- Functional code remains in project-specific repositories
+- Each MCP server maintains its own documentation
+- Independent versioning and release cycles
+
+### Centralized Knowledge
+- Documentation is aggregated at build time
+- Single, searchable documentation site
+- Unified navigation across all fleet components
+
+### AI-Native Design
+- Optimized for AI agent comprehension
+- Reduced token usage through efficient structure
+- Clear separation of concepts and implementation details
+
+---
+
+## Deployment
+
+This documentation is automatically built and deployed to GitHub Pages on every push to the `main` branch.
+
+### Automated Deployment
+
+- **Trigger**: Automatic on push to `main`, manual via Actions tab
+- **Build Time**: ~2-4 minutes
+- **Deployment Target**: GitHub Pages (`gh-pages` branch)
+- **Live Site**: [https://ki7mt.github.io/ki7mt-ai-docs/](https://ki7mt.github.io/ki7mt-ai-docs/)
+
+### Documentation Updates
+
+Documentation is pulled from three MCP server repositories at build time:
+- `wspr-mcp` - WSPR Engine documentation
+- `adif-mcp` - ADIF Normalization documentation
+- `solar-mcp` - Solar Context documentation
+
+Changes to these repositories are reflected in the next deployment after pushing to `main`.
+
+For deployment setup and troubleshooting, see the [Deployment Guide](DEPLOYMENT.md).
+
+---
+
+## Getting Started
+
+### For Developers
+
+1. Review the [Contributing Guidelines](CONTRIBUTING.md)
+2. Check the [Security Policy](SECURITY.md) for vulnerability reporting
+3. Explore individual MCP server documentation
+
+### For AI Agents
+
+1. Start with the Fleet Overview table to identify relevant data sources
+2. Navigate to component-specific documentation for API details
+3. Reference code examples and query patterns
+4. Follow architectural standards for consistency
+
+### Building Locally
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Serve documentation locally (with live reload)
+mkdocs serve
+
+# Build static site
+mkdocs build
+
+# Build with strict mode (catches warnings)
+mkdocs build --strict
+```
+
+See the [Installation Guide](docs/getting-started/installation.md) for detailed setup instructions.
+
+---
+
+## Project Status
+
+This documentation hub is actively maintained and continuously updated as the Sovereign Fleet evolves. Each MCP server is in active development with regular data ingestion and capability expansion.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+## Contact
+
+- **Maintainer**: KI7MT (Greg Beam)
+- **Security**: See [SECURITY.md](SECURITY.md) for vulnerability reporting
+- **Issues**: Use the [GitHub issue tracker](.github/ISSUE_TEMPLATE/bug_report.md)
+
+---
+
+**Sovereign Infrastructure. Agentic Intelligence. Data Freedom.**

@@ -1,0 +1,58 @@
+/*
+ * Sovereign Fleet Custom CSS
+ *
+ * This stylesheet provides custom branding and styling for the
+ * KI7MT Sovereign AI Fleet documentation hub.
+ *
+ * Replace this placeholder with your custom theme colors,
+ * typography adjustments, and branding elements.
+ */
+
+:root {
+  /* Sovereign Fleet Brand Colors - Update these with your actual brand palette */
+  --sf-primary: #3f51b5;
+  --sf-accent: #673ab7;
+  --sf-background: #ffffff;
+  --sf-text: #212121;
+
+  /* Dark mode variants */
+  --sf-dark-primary: #5c6bc0;
+  --sf-dark-accent: #9575cd;
+  --sf-dark-background: #1e1e1e;
+  --sf-dark-text: #e0e0e0;
+}
+
+/* Custom header styling */
+.md-header {
+  /* Add custom header styling here */
+}
+
+/* Custom navigation styling */
+.md-nav {
+  /* Add custom navigation styling here */
+}
+
+/* Code block enhancements */
+.md-typeset code {
+  /* Custom code styling for technical documentation */
+}
+
+/* Callout boxes for important information */
+.md-typeset .admonition.fleet-info {
+  /* Custom admonition style for fleet-specific callouts */
+}
+
+/* Table styling for data-heavy pages */
+.md-typeset table {
+  /* Optimized table styling for large datasets */
+}
+
+/* Custom footer branding */
+.md-footer {
+  /* Add sovereign fleet footer elements */
+}
+
+/*
+ * Placeholder for additional custom styles
+ * Add your branding elements, animations, and theme customizations below
+ */

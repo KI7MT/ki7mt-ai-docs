@@ -1,0 +1,201 @@
+site_name: KI7MT Sovereign AI Fleet
+site_description: Central documentation hub for local-first, agentic workflows and data sovereignty
+site_author: KI7MT (Greg Beam)
+site_url: https://ki7mt.io
+
+# Repository
+repo_name: ki7mt/ki7mt-ai-docs
+repo_url: https://github.com/ki7mt/ki7mt-ai-docs
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2026 Greg Beam (KI7MT) - Sovereign Infrastructure. Agentic Intelligence. Data Freedom.
+
+# Theme Configuration
+theme:
+  name: material
+  # Placeholder: Replace with actual logo path when available
+  logo: assets/images/sovereign-fleet-logo.png
+  favicon: assets/images/favicon.ico
+
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  features:
+    - navigation.instant        # Instant loading
+    - navigation.tracking       # Anchor tracking
+    - navigation.tabs           # Navigation tabs
+    - navigation.tabs.sticky    # Sticky navigation tabs
+    - navigation.sections       # Navigation sections
+    - navigation.expand         # Expand navigation by default
+    - navigation.indexes        # Section index pages
+    - navigation.top            # Back to top button
+    - search.suggest            # Search suggestions
+    - search.highlight          # Highlight search results
+    - search.share              # Share search results
+    - header.autohide           # Auto-hide header
+    - content.code.copy         # Copy code button
+    - content.code.annotate     # Code annotations
+    - content.tabs.link         # Link content tabs
+
+# Plugins
+plugins:
+  - search:
+      lang: en
+      separator: '[\s\-\.]+'
+
+  - multirepo:
+      # Cleanup temporary directories
+      cleanup: true
+
+      # Repository configurations
+      repos:
+        - name: wspr-mcp
+          import_url: 'https://github.com/ki7mt/wspr-mcp?branch=main&docs_dir=docs'
+          section: WSPR Engine
+
+        - name: adif-mcp
+          import_url: 'https://github.com/ki7mt/adif-mcp?branch=main&docs_dir=docs'
+          section: ADIF Normalization
+
+        - name: solar-mcp
+          import_url: 'https://github.com/ki7mt/solar-mcp?branch=main&docs_dir=docs'
+          section: Solar Context
+
+# Extensions
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ki7mt
+      name: KI7MT on GitHub
+    - icon: fontawesome/solid/tower-broadcast
+      link: https://ki7mt.io
+      name: KI7MT Homepage
+
+  analytics:
+    # Placeholder: Add analytics provider when needed
+    # provider: google
+    # property: G-XXXXXXXXXX
+
+  version:
+    provider: mike
+    default: latest
+
+# Placeholder: Custom CSS for sovereign fleet branding
+extra_css:
+  - assets/css/sovereign-fleet.css
+  - assets/css/custom-theme.css
+
+# Placeholder: Custom JavaScript if needed
+extra_javascript:
+  - assets/js/custom.js
+
+# Navigation Structure
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Overview: getting-started/overview.md
+      - Quick Start: getting-started/quickstart.md
+      - Installation: getting-started/installation.md
+      - Configuration: getting-started/configuration.md
+
+  - WSPR Engine:
+      - Overview: wspr-mcp/index.md
+      - Architecture: wspr-mcp/architecture.md
+      - Data Ingestion: wspr-mcp/ingestion.md
+      - Query Engine: wspr-mcp/queries.md
+      - API Reference: wspr-mcp/api.md
+      - Performance: wspr-mcp/performance.md
+
+  - ADIF Normalization:
+      - Overview: adif-mcp/index.md
+      - ADIF Standard: adif-mcp/standard.md
+      - Log Import: adif-mcp/import.md
+      - Data Validation: adif-mcp/validation.md
+      - API Reference: adif-mcp/api.md
+
+  - Solar Context:
+      - Overview: solar-mcp/index.md
+      - Data Sources: solar-mcp/sources.md
+      - Propagation Analysis: solar-mcp/propagation.md
+      - Space Weather: solar-mcp/space-weather.md
+      - API Reference: solar-mcp/api.md
+
+  - Architecture:
+      - Sovereign Infrastructure: architecture/infrastructure.md
+      - Hardware Stack: architecture/hardware.md
+      - Data Sovereignty: architecture/sovereignty.md
+      - AI Agent Context: architecture/ai-context.md
+      - MCP Protocol: architecture/mcp-protocol.md
+
+  - Contributing:
+      - Guidelines: CONTRIBUTING.md
+      - Security: SECURITY.md
+      - Issue Templates: contributing/issue-templates.md
+
+  - About:
+      - Mission Statement: about/mission.md
+      - License: LICENSE
+      - Contact: about/contact.md
